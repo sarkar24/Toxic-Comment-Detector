@@ -3,6 +3,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, BertTokenizer, BertForSequenceClassification
 import torch.nn.functional as F
+# from transformers import BertTokenizer, TFBertForSequenceClassification
 
 # Load config manually
 # from transformers import BertConfig
@@ -10,8 +11,8 @@ import torch.nn.functional as F
 
 # Load model and tokenizer ONCE (global load)
 # Use correct path to local folder
-tokenizer = BertTokenizer.from_pretrained("toxic_bert_model")
-model = BertForSequenceClassification.from_pretrained("toxic_bert_model")
+tokenizer = BertTokenizer.from_pretrained("sarkararnab/toxic_bert_model")
+model = BertForSequenceClassification.from_pretrained("sarkararnab/toxic_bert_model")
 
 model.eval()
 
